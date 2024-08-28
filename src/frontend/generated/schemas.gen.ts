@@ -244,7 +244,7 @@ export const $ChatMessage = {
           type: "null",
         },
       ],
-      title: "Sources",
+      title: "Jira Ticket",
     },
     images: {
       anyOf: [

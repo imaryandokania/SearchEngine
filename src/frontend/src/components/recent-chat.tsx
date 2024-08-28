@@ -18,7 +18,7 @@ export default function RecentChat({
   return (
     <Link
       href={`/search/${id}`}
-      className="flex-1 rounded-md flex-col cursor-pointer transition-colors group bg-background no-underline"
+      className="flex-1 rounded-md flex-col cursor-pointer transition-colors group bg-white no-underline"
     >
       <div className="p-2 flex flex-col justify-between h-full space-y-3">
         <div className="flex flex-col">

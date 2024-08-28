@@ -52,27 +52,27 @@ export function SearchResults({ results }: { results: SearchResult[] }) {
         return (
           <HoverCard key={`source-${index}`}>
             <HoverCardTrigger asChild>
-              <div className="w-1/2 md:w-1/4 p-1">
+              <div className="w-1 md:w-1/3 p-1">
                 <a className="" href={url} target="_blank">
-                  <Card className="flex-1 rounded-md flex-col shadow-none border-none h-[70px]">
-                    <CardContent className="p-2 flex flex-col justify-between h-full">
-                      <p className="text-xs line-clamp-2 font-medium text-foreground/80 text-white">
-                        {title}
+                  <Card className="flex-1 rounded-md flex-col shadow-none border-none h-[70px] bg-white">
+                    <CardContent className="p-1 flex flex-col justify-between h-full">
+                      <p className="text-xs line-clamp-1 font-small text-black align-lefts bold">
+                      {"JIRA -" + (index+1 )+": "+title}
+                        {/* {title} */}
                       </p>
                       <div className="flex space-x-1">
                         <div className="flex items-center space-x-2">
-                          <div className="rounded-full overflow-hidden relative">
+                          <div className="rounded-full overflow-hidden relative text-black">
                             <Logo url={url} />
                           </div>
-                          <div className="text-xs text-muted-foreground truncate font-medium">
+                          <div className="text-xs text-muted-foreground truncate font-medium text-black text-transform: capitalize">
                             {formattedUrl}
                           </div>
                         </div>
                         <div className="text-xs text-muted-foreground font-medium">
-                          ·
                         </div>
                         <div className="text-xs text-muted-foreground truncate font-medium">
-                          {index + 1}
+                         
                         </div>
                       </div>
                     </CardContent>
@@ -107,7 +107,7 @@ export function SearchResults({ results }: { results: SearchResult[] }) {
         w-1/2 md:w-1/4  p-1"
           onClick={() => setShowAll(true)}
         >
-          <Card className="flex-1 rounded-md flex-col shadow-none border-none h-[70px]">
+          {/* <Card className="flex-1 rounded-md flex-col shadow-none border-none h-[70px]">
             <CardContent className="p-2 flex flex-col justify-between h-full">
               <div className="flex items-center space-x-2">
                 {additionalResults.map(({ url }, index) => {
@@ -118,7 +118,7 @@ export function SearchResults({ results }: { results: SearchResult[] }) {
                 View {additionalCount} more
               </div>
             </CardContent>
-          </Card>
+          </Card> */}
         </div>
       )}
     </div>

@@ -47,7 +47,7 @@ def rephrase_query_with_history(
 
 def format_context(search_results: List[SearchResult]) -> str:
     return "\n\n".join(
-        [f"Citation {i+1}. {str(result)}" for i, result in enumerate(search_results)]
+        [f"Citation{i+1}. {str(result)}" for i, result in enumerate(search_results)]
     )
 
 

@@ -57,14 +57,14 @@ export const AssistantMessageContent = ({
 
   return (
     <div className="flex flex-col">
-      <Section title="Summary" animate={isStreaming} streaming={isStreaming}>
+      <Section title="Ticket Description" animate={isStreaming} streaming={isStreaming}>
         {content ? (
           <MessageComponent message={message} isStreaming={isStreaming} />
         ) : (
           <MessageComponentSkeleton />
         )}
       </Section>
-      <Section title="Links" animate={isStreaming}>
+      <Section title="JiraTickets" animate={isStreaming}>
         {!sources || sources.length === 0 ? (
           <SearchResultsSkeleton />
         ) : (
@@ -80,14 +80,14 @@ export const AssistantMessageContent = ({
           <ImageSectionSkeleton />
         )}
       </Section> */}
-      {related_queries && related_queries.length > 0 && (
+      {/* {related_queries && related_queries.length > 0 && (
         <Section title="Similar" animate={isStreaming}>
           <RelatedQuestions
             questions={related_queries}
             onSelect={onRelatedQuestionSelect}
           />
         </Section>
-      )}
+      )} */}
     </div>
   );
 };

@@ -18,7 +18,7 @@ import {
   PenIcon,
   Rabbit,
   RabbitIcon,
-  SettingsIcon,
+  Loader,
   Smile,
   SparklesIcon,
   WandSparklesIcon,
@@ -89,13 +89,13 @@ export const modelMap: Record<ChatModel, Model> = {
   //   smallIcon: <FlameIcon className="w-4 h-4 text-green-500" />,
   //   icon: <FlameIcon className="w-5 h-5 text-green-500" />,
   // },
-  // [ChatModel.CUSTOM]: {
-  //   name: "Custom Model",
-  //   // description: "Custom model",
-  //   value: ChatModel.CUSTOM,
-  //   smallIcon: <SettingsIcon className="w-4 h-4 text-red-500" />,
-  //   icon: <SettingsIcon className="w-5 h-5 text-red-500" />,
-  // },
+  [ChatModel.CUSTOM]: {
+    name: "AGILE Model LLM",
+    // description: "Custom model",
+    value: ChatModel.CUSTOM,
+    smallIcon: <Loader className="w-4 h-4 text-blue-500" />,
+    icon: <Loader className="w-5 h-5 text-blue-500" />,
+  },
 };
 
 const localModelMap: Partial<Record<ChatModel, Model>> = _.pickBy(
@@ -138,14 +138,14 @@ export function ModelSelection() {
         }
       }}
     >
-      <SelectTrigger className="w-fit space-x-2 bg-transparent outline-none border-none select-none focus:ring-0 shadow-none transition-all duration-200 ease-in-out hover:scale-[1.05] text-sm">
-        <SelectValue>
+      <div className="w-fit space-x-2 bg-transparent outline-none border-none select-none focus:ring-0 shadow-none transition-all duration-200 ease-in-out hover:scale-[1.05] text-sm">
+        {/* <SelectValue> */}
           <div className="flex items-center space-x-2">
             {selectedModel.smallIcon}
             <span className="font-semibold">{selectedModel.name}</span>
           </div>
-        </SelectValue>
-      </SelectTrigger>
+        {/* </SelectValue> */}
+      </div>
       <SelectContent className="w-[250px]">
         <Tabs
           className="w-full"
@@ -159,9 +159,9 @@ export function ModelSelection() {
           }}
         >
           <TabsList className="w-full">
-            <TabsTrigger value="cloud" className="flex-1">
+            {/* <TabsTrigger value="cloud" className="flex-1">
               API Based
-            </TabsTrigger>
+            </TabsTrigger> */}
             <TabsTrigger
               value="local"
               disabled={!env.NEXT_PUBLIC_LOCAL_MODE_ENABLED}

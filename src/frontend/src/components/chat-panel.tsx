@@ -121,7 +121,7 @@ export const ChatPanel = ({ threadId }: { threadId?: number }) => {
         )
       ) : (
         <div className="w-full flex flex-col justify-center items-center">
-          <div className="flex items-center justify-center mb-8">
+          <div className="w-full bg-transparent text-md resize-none focus:outline-none p-2 text-white font-bold text-center">
             <span className="text-3xl text-purple">What do you want to search?</span>
           </div>
           <AskInput sendMessage={handleSend} />

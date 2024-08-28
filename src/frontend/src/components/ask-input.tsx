@@ -1,7 +1,7 @@
 import TextareaAutosize from "react-textarea-autosize";
 import { useState } from "react";
 import { Button } from "./ui/button";
-import { ArrowUp } from "lucide-react";
+import { SendHorizontal } from "lucide-react";
 import ProToggle from "./pro-toggle";
 
 import { ModelSelection } from "./model-selection";
@@ -14,7 +14,7 @@ const InputBar = ({
   setInput: (input: string) => void;
 }) => {
   return (
-    <div className="w-full flex flex-col rounded-md focus:outline-none px-2 py-1 bg-card border-2 ">
+    <div className=" mt-10 w-full flex flex-col rounded-md focus:outline-none px-2 py-1 bg-card border-2 ">
       <div className="w-full">
         <TextareaAutosize
           className="w-full bg-transparent text-md resize-none focus:outline-none p-2"
@@ -33,10 +33,10 @@ const InputBar = ({
             type="submit"
             variant="default"
             size="icon"
-            className="rounded-full bg-tint aspect-square h-8 w-8 disabled:opacity-20 hover:bg-tint/80 overflow-hidden"
+            className="rounded-full  bg-white aspect-square h-8 w-8 disabled:opacity-20 hover:bg-blue overflow-hidden"
             disabled={input.trim().length < 5}
           >
-            <ArrowUp size={20} />
+            <SendHorizontal size={20} />
           </Button>
         </div>
       </div>
@@ -67,10 +67,10 @@ const FollowingUpInput = ({
           type="submit"
           variant="default"
           size="icon"
-          className="rounded-full bg-tint aspect-square h-8 w-8 disabled:opacity-20 hover:bg-tint/80 overflow-hidden"
+          className="rounded-full bg-white  aspect-square h-8 w-8 disabled:opacity-20 hover:bg-blue overflow-hidden"
           disabled={input.trim().length < 5}
         >
-          <ArrowUp size={20} />
+          <SendHorizontal size={20} />
         </Button>
       </div>
     </div>

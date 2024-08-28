@@ -32,7 +32,7 @@ const config = {
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         // background-image:"/path/to/your/image.jpg",
-        background: "skyblue",
+        background: "",
         foreground: "black",
         primary: {
           DEFAULT: "hsl(var(--primary))",

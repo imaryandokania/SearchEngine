@@ -23,8 +23,8 @@ const CitationText = ({ number, href }: { number: number; href: string }) => {
   <button className="select-none no-underline">
   <a className="" href="${href}" target="_blank">
         <span className="relative -top-[0rem] inline-flex">
-          <span className="h-[1rem] min-w-[1rem] items-center justify-center rounded-full  text-center px-1 text-xs font-mono bg-muted text-[0.60rem] text-muted-foreground">
-            ${number}
+          <span className="h-[1rem] min-w-[1rem] items-center justify-center text-center px-1 text-xs font-mono bg-white text-black border border-gray-300 rounded-md shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            ${"JIRA: " + number}
           </span>
         </span>
       </a>
